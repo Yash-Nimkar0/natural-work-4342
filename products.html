@@ -51,11 +51,11 @@
     <h2 class="title">Our Products</h2>
     <select id="filter">
         <option value="">Filter by category</option>
-        <option value="lipstick">lipstick</option>
-        <option value="liquid">Liquid</option>
-        <option value="pencil">Pencil</option>
-        <option value="powder">Powder</option>
-        <option value="lip_gloss">Lip Gloss</option>
+        <option value="Shoes">Shoes</option>
+        <option value="Furniture">Furniture</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Others">Others</option>
+        
     </select>
     <select name="" id="sort">
         <option value="sort">Sort by</option>
@@ -112,7 +112,7 @@
     let fetcheddata=[]
     filterselect.addEventListener('change',()=>{
         let filtered=fetcheddata.filter((element)=>{
-            if(element.category==filterselect.value){
+            if(element.category.name==filterselect.value){
                 return true
             }
             else{
